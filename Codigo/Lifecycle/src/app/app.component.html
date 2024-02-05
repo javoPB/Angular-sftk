@@ -1,0 +1,9 @@
+<app-child [dataParent]="data"></app-child>
+
+<input type="text" name="test" id="test" placeholder="test" [(ngModel)]="dataParent" />
+<br>
+{{dataParent}}
+
+<div id="panel-color" style="width: 500px; height: 500px;" [class]="divStyle">
+  <button type="button" (click)="aplicarColor()">Aplicar color</button>
+</div>

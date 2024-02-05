@@ -1,0 +1,32 @@
+<div style="border: 10px solid green;">
+    <h2>Información del Usuario: </h2>
+    <h5>
+    nombr   e: {{usuario.nombre}} <br>
+    usuario: {{usuario.usuario}} <br>
+    telefono: {{usuario.telefono}}
+    </h5>
+</div>
+<br>
+<div style="border: 10px solid green;">
+    <h2>Información del Prestamo: </h2>
+    <h5>
+    fecInicio: {{prestamo.fecInicio}} <br>
+    fecDevolucion: {{prestamo.fecDevolucion}} <br>
+    usuario: {{prestamo.usuario}}
+    </h5>
+</div>
+<br>
+<div style="border: 10px solid green;">
+    <h2>Información del Libro: </h2>
+    <h5>
+    isbn: {{libro.isbn}} <br>
+    titulo: {{libro.titulo}} <br>
+    autor: {{libro.autor}} <br>
+    editorial: {{libro.editorial}} <br>
+    fecPublicacion: {{libro.fecPublicacion}} <br>
+    numEjemplares: {{libro.numEjemplares}}
+</h5>
+</div>
+
+<br><br>
+<app-componente-hijo [infoLibro]="libro"></app-componente-hijo>

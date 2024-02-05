@@ -1,0 +1,16 @@
+<h1>componente-hijo works!</h1>
+
+<button type="button" (click)="mostrarInfo()">Ver Detalle</button>
+<button type="button" (click)="ocultarInfo()">Ocultar Detalle</button>
+
+<div style="border: 10px solid lightseagreen;" *ngIf="viewFlag">
+    <h2>Información del Libro: </h2>
+    <h5>
+    isbn: {{infoLibro.isbn}} <br>
+    titulo: {{infoLibro.titulo}} <br>
+    autor: {{infoLibro.autor}} <br>
+    editorial: {{infoLibro.editorial}} <br>
+    fecPublicacion: {{infoLibro.fecPublicacion}} <br>
+    numEjemplares: {{infoLibro.numEjemplares}} <br>    
+    </h5>
+</div>
