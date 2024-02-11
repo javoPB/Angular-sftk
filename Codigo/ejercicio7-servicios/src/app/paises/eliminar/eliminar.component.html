@@ -1,0 +1,28 @@
+<div class="card">
+    <div class="card-header">
+      Eliminar País
+    </div>
+    <div class="card-body" *ngIf="pais">
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Nombre: </span>
+            <input type="text" class="form-control" placeholder="nombre" aria-label="Pais" readonly aria-describedby="basic-addon1" [value]="pais.nombre">
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Bandera: </span>
+            <img [src]="pais.bandera">
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Capital: </span>
+            <input type="text" class="form-control" placeholder="capital" aria-label="Pais" readonly aria-describedby="basic-addon1" [value]="pais.capital">
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">Población: </span>
+            <input type="text" class="form-control" placeholder="Población" aria-label="Pais" readonly aria-describedby="basic-addon1" [value]="pais.poblacion">
+        </div>
+    </div>
+
+    <div class="mt-5">
+        <button type="button" class="btn btn-outline-primary" (click)="regresar()">Regresar</button>
+        <button type="button" class="btn btn-outline-primary" (click)="eliminar()">Eliminar</button>
+    </div>
+  </div>

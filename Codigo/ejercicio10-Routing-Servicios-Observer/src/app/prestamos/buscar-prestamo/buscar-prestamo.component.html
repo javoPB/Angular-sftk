@@ -1,0 +1,16 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Fecha de Inicio</th>
+        <th scope="col">Fecha de Devolución</th>
+        <th scope="col">Usuario</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let prestamo of prestamos">
+        <td>{{prestamo.fecInicio}}</td>
+        <td>{{prestamo.fecDevolucion}}</td>
+        <td>{{prestamo.usuario}}</td>
+      </tr>
+    </tbody>
+  </table>

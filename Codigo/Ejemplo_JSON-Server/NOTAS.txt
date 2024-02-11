@@ -1,0 +1,7 @@
+Referencias de JSON-Server: https://www.npmjs.com/package/json-server/v/0.16.1
+
+
+Instalación de JSON-Server: 																								npm install -g json-server
+Levantar el JSON-Server (En el servidor debe existir un archivo db.json - contiene la información, como una especie de BD): json-server --watch <fileName>.json
+
+El servidor levanta en: http://localhost:3000/

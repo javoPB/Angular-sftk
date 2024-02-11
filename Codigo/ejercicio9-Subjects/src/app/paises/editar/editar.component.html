@@ -1,0 +1,12 @@
+<div class="card border-dark mb-3" style="max-width: 18rem;">
+    <div class="card-header">Editar</div>
+    <div class="card-body text-dark" *ngIf="pais">
+      <p class="card-text">Nombre: {{pais.nombre}}</p>
+      <p class="card-text">Bandera: {{pais.bandera}}</p>
+      <p class="card-text">Capital: {{pais.capital}}</p>
+      <p class="card-text">Población: {{pais.poblacion}}</p>
+    </div>
+</div>
+  
+<button type="button" class="btn btn-primary" (click)="regresar()">Regresar</button>
+<button type="button" class="btn btn-primary" (click)="editar()">Editar</button>

@@ -1,0 +1,29 @@
+<div class="d-grid gap-2 justify-content-md-end">
+    <button type="button" class="btn btn-success btn-lg" (click)="crear()">Nuevo</button>
+</div>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Isbn</th>
+        <th scope="col">Titulo</th>
+        <th scope="col">Autor</th>
+        <th scope="col">Editorial</th>
+        <th scope="col">Fecha de Publicación</th>
+        <th scope="col">Número de Ejemplares</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let libro of libros">
+        <td>{{libro.isbn}}</td>
+        <td>{{libro.titulo}}</td>
+        <td>{{libro.autor}}</td>
+        <td>{{libro.editorial}}</td>
+        <td>{{libro.fecPublicacion}}</td>
+        <td>{{libro.numEjemplares}}</td>
+        <td> <button type="button" class="btn btn-secondary">Editar</button> </td>
+        <td> <button type="button" class="btn btn-danger">Eliminar</button> </td>
+
+      </tr>
+    </tbody>
+</table>

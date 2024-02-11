@@ -1,0 +1,31 @@
+<p>buscar works!</p>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Bandera</th>
+        <th scope="col">Capital</th>
+        <th scope="col">Población</th>
+      </tr>
+    </thead>
+    <tbody class="table-group-divider">
+      <tr *ngFor="let pais of paises">
+        <th scope="row">{{pais.id}}</th>
+        <td>{{pais.nombre}}</td>
+        <td><img [src]="'https://upload.wikimedia.org/wikimedia/commons/' + pais.bandera"></td>
+        <td>{{pais.capital}}</td>
+        <td>{{pais.poblacion | number}}</td>
+        <td>
+            <button type="button" class="btn btn-outline-primary" (click)="editar(pais.id)">Editar</button>
+        </td>
+        <td>
+            <button type="button" class="btn btn-outline-danger" (click)="eliminar(pais.id)">Eliminar</button>
+        </td>
+        <td>
+          <button type="button" class="btn btn-outline-primary" (click)="buscarPorNombre(pais.nombre)">Buscar</button>
+      </td>
+      </tr>
+    </tbody>
+  </table>
