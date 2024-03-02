@@ -9,6 +9,8 @@ import { AfterContentChecked, AfterContentInit, AfterViewInit, Component, DoChec
 export class AppComponent implements OnChanges, OnInit, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit {
   title = 'Lifecycle';
   data: string = 'Texto enviado desde app-component';
+
+  //@Output() dataParent: EventEmitter<string>  = new EventEmitter<string>(); --> Los Output se manejan mediante un EventEmitter 
   dataParent: EventEmitter<string>  = new EventEmitter<string>();
   divStyle: string = '';
 

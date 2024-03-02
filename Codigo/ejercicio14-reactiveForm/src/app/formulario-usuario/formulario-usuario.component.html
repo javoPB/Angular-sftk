@@ -1,0 +1,82 @@
+<div class="container">
+    <h3>Empleado - Formularios Reactivos - Reactive Forms</h3>
+
+    <form [formGroup]="empleadoReactiveForm" (ngSubmit)="submit()">
+        <div class="form-group">
+            <label for="id">Id: </label>
+            <input type="text" formControlName="id" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="name">Name: </label>
+            <input type="text" formControlName="name" class="form-control">
+            <div class="alert alert-danger" *ngIf="empleadoReactiveForm.get('name')?.touched && empleadoReactiveForm.get('name')?.invalid">
+                <p>Name is invalid</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="username">User Name: </label>
+            <input type="text" formControlName="username" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="email">Email: </label>
+            <input type="text" formControlName="email" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone: </label>
+            <input type="text" formControlName="phone" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="website">Website: </label>
+            <input type="text" formControlName="website" class="form-control">
+        </div>
+
+        <fieldset formGroupName="address">
+            <div class="form-group">
+                <label for="street">Street: </label>
+                <input type="text" formControlName="street" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="suite">Suite: </label>
+                <input type="text" formControlName="suite" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="city">City: </label>
+                <input type="text" formControlName="city" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="zipcode">Zipcode: </label>
+                <input type="text" formControlName="zipcode" class="form-control">
+            </div>
+            <fieldset formGroupName="geo">
+                <div class="form-group">
+                    <label for="lat">Lat: </label>
+                    <input type="text" formControlName="lat" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="lng">Lng: </label>
+                    <input type="text" formControlName="lng" class="form-control">
+                </div>                
+            </fieldset>   
+        </fieldset>
+        <fieldset formGroupName="company">
+            <div class="form-group">
+                <label for="name">Name: </label>
+                <input type="text" formControlName="name" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="chatphrase">Chatphrase: </label>
+                <input type="text" formControlName="chatphrase" class="form-control">
+            </div>
+            <div class="form-group">
+                <label for="bs">Bs: </label>
+                <input type="text" formControlName="bs" class="form-control">
+            </div>                
+        </fieldset>
+
+        <pre>
+            {{empleadoReactiveForm.value | json}}
+        </pre>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>    

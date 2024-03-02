@@ -1,0 +1,53 @@
+<div class="container">
+    <h3>New User Form - Formularios dirigidos por Plantillas </h3>
+
+    <form #userForm="ngForm" (ngSubmit)="submit(userForm)">
+        <div class="form-group">
+            <label for="name">Name:</label> 
+            <input type="text" class="form-control" required name="name" minlength="2" maxlength="10" ngModel #name="ngModel">
+            <div *ngIf="name.touched && name.invalid" class="alert alert-danger">
+                <p *ngIf="name.errors && name.errors['minlength']">Validate name length</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="userName">UserName:</label> 
+            <input type="text" class="form-control" name="username" ngModel #username="ngModel">
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label> 
+            <input type="text" class="form-control" name="email" ngModel #email="ngModel">
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone:</label> 
+            <input type="text" class="form-control" name="phone" ngModel #phone="ngModel">
+        </div>
+        <div class="form-group">
+            <label for="website">Website:</label> 
+            <input type="text" class="form-control" name="website" ngModel #website="ngModel">
+        </div>
+
+        <br>
+        <div class="radio">
+            Genders:
+            <br>
+            <label for="genders" *ngFor="let gender of genders">
+                <input type="radio" name="gender" [value]="gender" ngModel>{{gender}}
+            </label>
+        </div>
+
+        <br>
+        <div class="form-group">
+            <label for="communication">Communication Options:</label>
+            <select name="communicationModes" class="form-control" ngModel>
+                <option value=""></option>
+                <option value="" *ngFor="let communication of communicationModes" [value]="communication">{{communication}}</option>
+            </select>
+        </div>
+
+        <!-- Etiqueta para pre visualizar el contenido del formulario -->
+        <pre>
+            {{ userForm.value | json}}
+        </pre>
+        <button type="submit" class="btn btn-primary" [disabled]="userForm.invalid">Submit</button>
+    </form>
+</div>

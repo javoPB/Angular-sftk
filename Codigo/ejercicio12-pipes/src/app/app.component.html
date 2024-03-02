@@ -1,0 +1,30 @@
+<h1>{{title}}</h1>
+
+<div style="border: 1px solid blue;" title="aaaa">
+ <h3>Datos sin formato: </h3> 
+<strong>Precio:</strong> {{precio}} <br>
+<strong>Medida:</strong> {{medida}} <br>
+<strong>Texto:</strong> {{texto}} <br>
+<strong>Porcentaje:</strong> {{porcentaje}} <br>
+<strong>Datos:</strong> {{datos}} <br>
+</div>
+
+
+<div style="border: 1px solid blue;" title="aaaa">
+  <h3>Datos con formato: </h3> 
+ <strong>Precio:</strong> {{precio | currency}} <br>
+ <strong>Medida:</strong> {{medida | number: "0.5-10"}} <br>
+ <strong>Texto:</strong> {{texto | uppercase}} <br>
+ <strong>Porcentaje:</strong> {{porcentaje | percent: "0.3-4"}} <br>
+ <strong>Datos:</strong> {{datos | json}} <br>
+ </div>
+
+ <div style="border: 1px solid blue;" title="aaaa">
+  <h3>Agregando pipe personalizado: </h3> 
+ <strong>Precio:</strong> {{precio | addtext: ' - nuevo texto'}} <br>
+ <strong>Medida:</strong> {{medida | addtext}} <br>
+ <strong>Texto:</strong> {{texto | addtext}} <br>
+ <strong>Porcentaje:</strong> {{porcentaje | addtext}} <br>
+ <strong>Datos:</strong> {{datos | addtext}} <br>
+ </div>
+ 
